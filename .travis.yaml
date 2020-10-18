@@ -1,0 +1,12 @@
+os:
+  - linux
+
+language: python
+
+sudo: required
+
+before-install:
+  - docker build -t flask_yt:latest -f Dockerfile.dev .
+
+script:
+  - docker run --name dev_test_fyt -d flask_yt:latest
