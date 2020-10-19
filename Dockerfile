@@ -10,7 +10,7 @@ WORKDIR /app
 #we can ignore this since in docker-compose we are using volumes, which is referencing, so no point
 COPY . /app				
 RUN pip3 --no-cache-dir install -r requirements.txt
-EXPOSE 5001
+#EXPOSE 5001
 ENTRYPOINT [ "python3" ]
 CMD [ "empl.py" ]
 
