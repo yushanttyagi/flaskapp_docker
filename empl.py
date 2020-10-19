@@ -36,7 +36,7 @@ def register():
 		hostname = socket.gethostname()    
 		IPAddr = socket.gethostbyname(hostname) 
 		#session.execute("insert into employee(id,name,address) values({},'{}','{}')".format(idd,name,address))
-		return 'written successfull {}----{}'.format(hostname,IPAddr)
+		return 'updated on non parent branch,written successfull {}----{}'.format(hostname,IPAddr)
 	except Exception as e:
 		return e
 
