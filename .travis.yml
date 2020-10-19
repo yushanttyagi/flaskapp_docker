@@ -10,3 +10,16 @@ before-install:
 
 script:
   - docker run --name dev_test_fyt -d flask_yt:latest
+
+deploy:
+  provider: elasticbeanstalk
+  region: "us-east-2"
+  app: "ytflask_docker"
+  env: "YtflaskDocker-env"
+  bucket_name: "elasticbeanstalk-us-east-2-305327626004"
+  bucket_path: "ytflask_docker"
+  on:
+    branch: master
+
+  access_key_id: $AWS_ACCESS_KEY
+  secret_access_key: $AWS_SECRET_KEY
