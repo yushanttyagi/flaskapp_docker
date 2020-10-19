@@ -1,5 +1,5 @@
 #this is  a temporary container
-from alpine:latest
+FROM alpine:latest
 
 #apk is apache package and means we are using our base image to run some commands
 RUN apk add py3-pip		
